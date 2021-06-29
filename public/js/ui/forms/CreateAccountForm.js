@@ -15,6 +15,8 @@ class CreateAccountForm extends AsyncForm {
       if (response && response.success ) {
         super.resetFormData();
         App.getModal('CreateAccount').close();
+        App.getForm('createIncome').renderAccountsList();
+        App.getForm('createExpense').renderAccountsList();
         App.update();
       };
     };
