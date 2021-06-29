@@ -11,7 +11,7 @@ class CreateAccountForm extends AsyncForm {
      * и сбрасывает форму
      * */
   onSubmit( options) {
-    Entity.create('/account', options, response => {
+    Entity.create('/account', options, response) => {
       if (response && response.success ) {
         super.resetFormData();
         App.getModal('CreateAccount').close();
@@ -19,4 +19,5 @@ class CreateAccountForm extends AsyncForm {
       };
     };
   };
+};
 
