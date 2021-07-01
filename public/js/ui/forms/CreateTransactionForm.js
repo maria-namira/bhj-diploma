@@ -32,12 +32,12 @@ class CreateTransactionForm extends AsyncForm {
 
       this.element.reset();
 
-      if(App.getModal('newExpense')) {
-        App.getModal('newExpense').close();
+      if(App.getModal('createExpense')) {
+        App.getModal('createExpense').close();
       };
 
-      if(App.getModal('newIncome')) {
-        App.getModal('newIncome').close();
+      if(App.getModal('createIncome')) {
+        App.getModal('createIncome').close();
       };
 
       
