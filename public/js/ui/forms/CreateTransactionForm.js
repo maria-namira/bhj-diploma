@@ -38,7 +38,7 @@ class CreateTransactionForm extends AsyncForm {
    * в котором находится форма
    * */
   onSubmit(options) {
-    Transaction.create(options.data, (err, response) => {
+    Transaction.create(data, (err, response) => {
       if (response && response.success) {
         const transactionForm = document.querySelectorAll(".modal");
         transactionForm.forEach(form => {
