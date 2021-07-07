@@ -11,7 +11,7 @@ class CreateAccountForm extends AsyncForm {
      * и сбрасывает форму
      * */
   onSubmit( options) {
-    Account.create(options.data, (err, response) => {
+    Account.create(data, (err, response) => {
       if (response && response.success) {
         App.getModal("createAccount").close();
         App.update();
